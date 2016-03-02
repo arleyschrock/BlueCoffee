@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ServiceDefinition name="FastSnake" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2014-06.2.4">
+<ServiceDefinition name="FastSnake" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2015-04.2.6">
   <WorkerRole name="PrestoCoordinator" vmsize="Small">
     <Imports>
     </Imports>
@@ -14,6 +14,7 @@
     <ConfigurationSettings>
       <Setting name="BlueCoffee.Resources.Account.ConnectionString" />
       <Setting name="BlueCoffee.Resources.Container.Name" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
     </ConfigurationSettings>
   </WorkerRole>
   <WorkerRole name="PrestoWorker" vmsize="Small">
@@ -22,6 +23,7 @@
     <ConfigurationSettings>
       <Setting name="BlueCoffee.Resources.Account.ConnectionString" />
       <Setting name="BlueCoffee.Resources.Container.Name" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
     </ConfigurationSettings>
     <Endpoints>
       <InternalEndpoint name="HTTP" protocol="tcp" port="8081" />
@@ -46,6 +48,7 @@
     <ConfigurationSettings>
       <Setting name="BlueCoffee.Resources.Account.ConnectionString" />
       <Setting name="BlueCoffee.Resources.Container.Name" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
     </ConfigurationSettings>
   </WorkerRole>
   <WorkerRole name="Populator" vmsize="Small">
@@ -53,6 +56,7 @@
     </Imports>
     <ConfigurationSettings>
       <Setting name="ExceptionLogsAccount" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
     </ConfigurationSettings>
   </WorkerRole>
 </ServiceDefinition>

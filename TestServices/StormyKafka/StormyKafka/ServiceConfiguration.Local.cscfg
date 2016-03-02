@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ServiceConfiguration serviceName="StormyKafka" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2014-06.2.4">
+<ServiceConfiguration serviceName="StormyKafka" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2015-04.2.6">
   <Role name="KafkaBroker">
     <Instances count="1" />
     <ConfigurationSettings>
       <Setting name="BlueCoffee.Resources.Account.ConnectionString" value="UseDevelopmentStorage=true" />
       <Setting name="BlueCoffee.Resources.Container.Name" value="bluecoffeeresources" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
     </ConfigurationSettings>
   </Role>
   <Role name="ZooKeeper">
@@ -12,6 +13,7 @@
     <ConfigurationSettings>
       <Setting name="BlueCoffee.Resources.Account.ConnectionString" value="UseDevelopmentStorage=true" />
       <Setting name="BlueCoffee.Resources.Container.Name" value="bluecoffeeresources" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
     </ConfigurationSettings>
   </Role>
   <Role name="Nimbus">
@@ -20,6 +22,7 @@
       <Setting name="BlueCoffee.Resources.Account.ConnectionString" value="UseDevelopmentStorage=true" />
       <Setting name="BlueCoffee.Resources.Container.Name" value="bluecoffeeresources" />
       <Setting name="Output.Account.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
     </ConfigurationSettings>
   </Role>
   <Role name="Supervisor">
@@ -27,6 +30,7 @@
     <ConfigurationSettings>
       <Setting name="BlueCoffee.Resources.Account.ConnectionString" value="UseDevelopmentStorage=true" />
       <Setting name="BlueCoffee.Resources.Container.Name" value="bluecoffeeresources" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
     </ConfigurationSettings>
   </Role>
   <Role name="StormDrpcWebUI">
@@ -34,6 +38,7 @@
     <ConfigurationSettings>
       <Setting name="BlueCoffee.Resources.Account.ConnectionString" value="UseDevelopmentStorage=true" />
       <Setting name="BlueCoffee.Resources.Container.Name" value="bluecoffeeresources" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
     </ConfigurationSettings>
   </Role>
 </ServiceConfiguration>

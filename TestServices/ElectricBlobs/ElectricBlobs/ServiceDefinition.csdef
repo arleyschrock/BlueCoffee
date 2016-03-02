@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ServiceDefinition name="ElectricBlobs" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2014-06.2.4">
+<ServiceDefinition name="ElectricBlobs" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2015-04.2.6">
   <WorkerRole name="SparkMaster" vmsize="Small">
     <Imports>
     </Imports>
@@ -17,6 +17,7 @@
     <ConfigurationSettings>
       <Setting name="BlueCoffee.Resources.Account.ConnectionString" />
       <Setting name="BlueCoffee.Resources.Container.Name" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
     </ConfigurationSettings>
   </WorkerRole>
   <WorkerRole name="SparkSlave" vmsize="Small">
@@ -34,6 +35,7 @@
     <ConfigurationSettings>
       <Setting name="BlueCoffee.Resources.Account.ConnectionString" />
       <Setting name="BlueCoffee.Resources.Container.Name" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
     </ConfigurationSettings>
   </WorkerRole>
   <WorkerRole name="Shark" vmsize="Small">
@@ -52,6 +54,7 @@
     <ConfigurationSettings>
       <Setting name="BlueCoffee.Resources.Account.ConnectionString" />
       <Setting name="BlueCoffee.Resources.Container.Name" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
     </ConfigurationSettings>
   </WorkerRole>
   <WebRole name="SharkFrontEnd" vmsize="Small">
@@ -73,6 +76,7 @@
     <ConfigurationSettings>
       <Setting name="BlueCoffee.Resources.Account.ConnectionString" />
       <Setting name="BlueCoffee.Resources.Container.Name" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
     </ConfigurationSettings>
   </WebRole>
   <WorkerRole name="HiveMetastore" vmsize="Small">
@@ -88,6 +92,7 @@
     <ConfigurationSettings>
       <Setting name="BlueCoffee.Resources.Account.ConnectionString" />
       <Setting name="BlueCoffee.Resources.Container.Name" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
     </ConfigurationSettings>
   </WorkerRole>
 </ServiceDefinition>
